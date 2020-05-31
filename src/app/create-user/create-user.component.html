@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="p-3 my-3 bg-primary text-white" *ngIf="isUrlEnable">
+                    <a [routerLink]="['profile']" target=_blank style="color:white"
+                        [queryParams]={email:userEmail}>{{profileUrl}}</a>
+                </div>
+                <div class="card">
+                    <div class="card-header"></div>
+                    <form (ngSubmit)="saveUser()" [formGroup]="myform">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter name" class="form-control"
+                                    formControlName="displayName" required name="displayName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter email" class="form-control"
+                                    formControlName="email" required name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter mobile number" class="form-control"
+                                    formControlName="mobile" required name="mobile" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Age" class="form-control" formControlName="age"
+                                    required name="age" required>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

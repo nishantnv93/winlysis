@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>User Details</h3>
+                    </div>
+                    <div class="card-body" *ngIf="isUserDataRendered">
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Name:</b>&nbsp;&nbsp;{{userData.name}}</li>
+                            <li class="list-group-item"><b>Email:</b>&nbsp;&nbsp;{{userData.email}}</li>
+                            <li class="list-group-item"><b>Mobile Number:</b>&nbsp;&nbsp;{{userData.mobile}}</li>
+                            <li class="list-group-item"><b>Age:</b>&nbsp;&nbsp;{{userData.age}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
